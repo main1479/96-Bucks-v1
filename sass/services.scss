@@ -1,0 +1,40 @@
+.services{
+    margin: 5rem 0 5rem 0;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+        grid-gap: 10rem;
+        justify-content: center;
+        justify-items: center;  
+    }
+
+    &__box{
+        
+
+        &-icon{
+            width: 20rem;
+            height: 20rem;
+            border-radius: 2.5rem;
+            background: #fff;
+            box-shadow: 0 0 3rem #0004;
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+            transition: all .3s;
+            margin-bottom: 2.5rem;
+            cursor: pointer;
+            svg{  
+                width: 8rem;
+                height: 8rem;
+                
+            }
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+    }
+
+}

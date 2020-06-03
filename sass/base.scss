@@ -1,0 +1,168 @@
+
+// =================================================
+// colors
+
+$color-primary:#FF7657;
+$color-text:#48475C;
+
+// ==================================================================
+// media querys
+// ==================================================================
+$px1200:75em; //1200px
+$px1024:64em; //1024px
+$px992:62em; //992px
+$px768:48em; //1200px
+$px575:35.9375em; //575px
+$px480:30em; //480px
+$px380:23.75em; //380px
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    @media only screen and (max-width:$px1200){
+        font-size: 55%;
+    }
+
+    @media only screen and (max-width:$px1024){
+        font-size: 50%;
+    }
+}
+body{
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color:$color-text;
+    overflow-x: hidden;
+}
+
+// .main__grid{
+//     display: grid;
+//     grid-template-columns: repeat(12,minmax(-webkit-min-content,1fr));
+//     grid-template-columns: repeat(12,minmax(min-content,1fr));
+//     grid-column-gap: 2rem;
+// }
+
+
+.row{
+    max-width: 114rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+
+
+// ==============================================================
+//  buttons
+// ==============================================================
+.btn{
+    &,
+    &:link,
+    &:visited{
+        display: inline-block;
+        font-weight: 600;
+        background:$color-primary;
+        color:#fff;
+        padding: 1rem 2rem;
+        border-radius: 100px;
+        box-shadow: 0px 7px 20px rgba($color-primary,.7);
+        transition:all .2s;
+
+        &:hover{
+            transform: translateY(-.5rem);
+            box-shadow: 0px 10px 30px rgba($color-primary,.7);
+        }
+
+        &:active{
+            transform: translateY(-.3rem);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// ======================================================
+// utility classes
+// ======================================================
+.mb-1{margin-bottom: 1rem;}
+.mb-2{margin-bottom: 2rem;}
+.mb-3{margin-bottom: 3rem;}
+.mb-4{margin-bottom: 4rem;}
+.mb-5{margin-bottom: 5rem;}
+.mb-6{margin-bottom: 6rem;}
+.mb-7{margin-bottom: 7rem;}
+.mb-8{margin-bottom: 8rem;}
+.mb-9{margin-bottom: 9rem;}
+.mb-10{margin-bottom: 10rem;}
+
+
+.mt-1{margin-top: 1rem;}
+.mt-2{margin-top: 2rem;}
+.mt-3{margin-top: 3rem;}
+.mt-4{margin-top: 4rem;}
+.mt-5{margin-top: 5rem;}
+.mt-6{margin-top: 6rem;}
+.mt-7{margin-top: 7rem;}
+.mt-8{margin-top: 8rem;}
+.mt-9{margin-top: 9rem;}
+.mt-10{margin-top: 10rem;}
+.mt-11{margin-top: 11rem;}
+.mt-12{margin-top: 12rem;}
+.mt-13{margin-top: 13rem;}
+.mt-14{margin-top: 14rem;}
+.mt-15{margin-top: 15rem;}
+.mt-16{margin-top: 16rem;}
+
+.db{display: block;}
+.dib{display: inline-block;}
+.tac{text-align: center;}
+.ttu{text-transform: uppercase;}
+.fwn{font-weight: 400 !important;}
+
+.white{
+    &,
+    &:link,
+    &:visited{color:#fff !important;}
+}
+.italic{font-style: italic;}
+
+
+
+
+
+
+
+
+
+
+
+
+

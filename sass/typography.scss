@@ -1,0 +1,19 @@
+
+.heading-1{
+    font-size: 3.5rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+
+    @media only screen and (max-width:$px380){
+        font-size: 3rem;
+    }
+}
+.heading-2{
+    font-size: 3.5rem;
+}
+
+.heading-3{
+    font-size: 2rem;
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+
+.footer{
+    padding: 8rem 0;
+    background: $color-primary;
+
+    &__grid{
+        max-width: 70rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+        grid-gap: 4rem;
+    }
+
+    h3{
+        font-size: 2.2rem;
+    }
+
+
+    .social__icons{
+
+        
+    }
+
+    .social__icon{
+        &:link,
+        &:visited{
+            background: #fff;
+            color:$color-primary;
+            width: 4rem;
+            height: 4rem;
+            font-size: 2rem;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 4rem;
+            transition: all .3s;
+            margin-right: 2rem;
+
+
+            &:hover{
+                transform:scale(1.2);
+            }
+        }
+    }
+
+
+
+    .copyright{
+        text-align: right;
+    }
+}

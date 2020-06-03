@@ -1,0 +1,305 @@
+
+.header{
+    height: 110vh;
+    position: relative;
+    margin-bottom: 10rem;
+
+    @media only screen and (max-width:$px1024){
+        height: 90vh;
+    }
+    @media only screen and (max-width:$px768){
+        min-height: 80vh;
+    }
+
+    .nav{
+        padding: 3rem 0;
+        &__flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+    }
+
+    .main__nav{
+        display: flex;
+        align-items: center; 
+
+        @media only screen and (max-width:$px768){
+            display: none;
+        }
+
+        li{
+            &:not(:last-child){
+                margin-right: 5rem;
+            }
+
+            a{
+                &:link,
+                &:visited{
+                    display: inline-block;
+                    font-size: 1.6rem; 
+                    text-transform: uppercase;
+                    color:$color-text;
+                    position: relative;
+
+                    
+                    &::after{
+                        content:'';
+                        position: absolute;
+                        width: 100%;
+                        height: 2.5px;
+                        background: $color-primary;
+                        bottom: -2px;
+                        left: 0;
+                        transform: scale(0);
+                        transform-origin: left;
+                        transition:all .3s;
+                    }
+
+                    &:hover,
+                    &.active{
+                        &::after{
+                            transform: scale(1);
+                            transform-origin:right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(35rem,1fr));
+        grid-gap: 4rem;
+    }
+
+    &__content{
+        position: relative;
+        z-index: 2;
+
+        @media only screen and (max-width:$px768){
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            text-align: center;
+            br{
+                display: none;
+            }
+        }
+    }
+
+    
+    .floted__img1{
+        position: absolute;
+        width: 70%;
+        right: -20%;
+        top: 20%;
+        height: 80%;
+        width:80vw;
+
+        @media only screen and (max-width:$px1024){
+            display: none;
+        }
+        
+    }
+
+    &__img-box{
+        text-align: center;
+        margin-bottom: 10rem;
+
+        @media only screen and (max-width:$px768){
+            grid-column: 1/-1;
+             grid-row: 2/3;
+            
+        }
+
+        .header__img{
+            display: none;
+            width: 100%;
+
+            @media only screen and (max-width:$px1024){
+                display: block;
+                width: 100%;
+            }
+
+            @media only screen and (max-width:$px768){
+                width: 60%;
+                margin:3rem auto 10rem auto;
+                
+            }
+        }
+    }
+
+
+
+
+
+
+
+// ======================================================================================
+//  mobile menu
+// ======================================================================================
+.mobile__nav{
+    display: none;
+    @media only screen and (max-width:$px768){
+        display: block;
+    }
+    position: relative;
+    .nav__button{
+        width: 4.5rem;
+        height: 3.5rem;
+        // background: #000;
+        position: absolute;
+        z-index: 9;
+        cursor: pointer;
+        right: 2%;
+
+        span{
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 2.5px;
+            background:$color-text;
+            margin-top: 1.5rem;
+
+            &::before,
+            &::after{
+                content:'';
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 2.5px;
+                background:$color-text;
+                display: block;
+                transition: all .5s;
+            }
+
+            &::before{
+                top: -1.2rem;
+            }
+
+            &::after{
+                top: 1.2rem;
+            }
+        }
+    }
+
+    .mobile__menu{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 8;
+        background: $color-primary;
+        transition: all .8s cubic-bezier(.68,-0.55,.27,1.55);;
+        overflow: hidden;
+
+        li{
+            margin-bottom: .5rem;
+
+            a{
+                &:link,
+                &:visited{
+                    color:transparent;
+                    font-size: 6vmax;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    -webkit-text-stroke: 1.5px $color-text;
+                    text-stroke: 1.5px $color-text;
+                    background:linear-gradient(150deg,transparent, transparent 50%, $color-text 50%);
+                    -webkit-background-clip:text;
+                    background-clip:text;
+                    background-size: 253%;
+                    transition:all .5s;
+
+                    &:hover{
+                        background-position:100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.active{
+        .mobile__menu{
+            width: 70%;
+
+            @media only screen and (max-width:$px575){
+                width: 100%;
+            }
+        }
+
+
+        .nav__button{
+
+            span{
+                background: transparent;
+
+                &::before{
+                    top: 0;
+                    transform: rotate(-135deg);
+                }
+
+                &::after{
+                    top: 0;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
